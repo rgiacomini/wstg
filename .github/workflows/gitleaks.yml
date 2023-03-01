@@ -12,8 +12,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          config-path: .gitleak.toml
       - uses: gitleaks/gitleaks-action@v1.6.0
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_TEST }}
-          config-path: .gitleak.toml
+          
 
