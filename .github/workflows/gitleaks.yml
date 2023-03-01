@@ -15,4 +15,5 @@ jobs:
       - uses: gitleaks/gitleaks-action@v1.6.0
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_TEST }}
-                
+          config-path: .gitleak.toml
+
