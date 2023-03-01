@@ -1,9 +1,3 @@
-- name: Save state
-  run: echo "{name}={value}" >> $GITHUB_STATE
-
-- name: Set output
-  run: echo "{name}={value}" >> $GITHUB_OUTPUT
-
 name: gitleaks
 on:
   pull_request:
@@ -22,3 +16,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_TEST }}      
 
+- name: Save state
+  run: echo "{name}={value}" >> $GITHUB_STATE
+
+- name: Set output
+  run: echo "{name}={value}" >> $GITHUB_OUTPUT
